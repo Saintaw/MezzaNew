@@ -1,0 +1,14 @@
+{
+  "name": "mezzanew",
+  "version": "1.0.0",
+  "description": "New website for MezzaLuna",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "PLay"
+  ],
+  "author": "poiteal",
+  "license": "ISC"
+}

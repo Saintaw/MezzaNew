@@ -21,7 +21,8 @@
 
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="css/animate.min.css" type="text/css">
-
+    <link href="css/nanogallery.min.css" rel="stylesheet" type="text/css">
+  
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
     <style>
@@ -42,51 +43,9 @@
 </head>
 
 <body id="page-top">
-
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Cie - MezzaLuna</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    
-                      <li>
-                        <a class="page-scroll" href="#about">Accueil</a>
-                    </li>                  
-                    
-                    
-                    <li>
-                        <a class="page-scroll" href="#services">Créations</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#actu">Actualités</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#press">Presse</a>
-                    </li>                    
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
+<?php 
+require_once './inc/nav.php';
+?>
     <header>
         <div class="header-content">
             <div class="header-content-inner">
@@ -129,7 +88,7 @@
         </div>
     </section>
 
-    <section id="services">
+    <section id="Creations">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -141,25 +100,15 @@
         <div class="container">
             <div class="row">
                 <div class="Creations">
-                    //debug php out <br >
 <?php
-$dir    = './media/portfolio/';
-$files = scandir($dir);
-foreach ($files as &$value) {
-    
-    
-if (strpos($value, 'jpg') !== false) {
-    $size = getimagesize($dir .$value);
-    //echo "<img alt='" .$value ."' src='" .$dir .$value ."' width='" .$size[0]/10 ."' height='" .$size[1]/10 ."' class='creations_med' /> ";
-}    
-}
+require_once './inc/gallery.php';
 ?>
 </div>
             </div>
         </div>
     </section>
 
-    <section class="actu">
+    <section class="actu" id="actu">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -337,84 +286,18 @@ if (strpos($value, 'jpg') !== false) {
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
-    <script src="js/jquery.collagePlus.min.js"></script>
-    
+    <!--<script src="js/jquery.collagePlus.min.js"></script>-->
+    <script type="text/javascript" src="js/jquery.nanogallery.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
 
+    <!-- Custom scripts -->
+    <script src="js/gallery.js"></script>
 <script>
-   //.Creations
-$(window).load(function () {
-        $('.Creations').collagePlus();
 
-
-
-listCreations();
-
-
-function listCreations() {
-  var $testContainer = $('#jsontest');
-  var thumbsApi = "/photos-gallery/gallery.json";
-  $.getJSON( thumbsApi, {
-    format: "json"
-  })
-    .done(function( data ) {
-    console.log('data: ',data);
-        $(data).each(function(index, Element) {
-                //console.log(index,Element);
-                //only if it's an image
-                var n = Element.name.indexOf(".jpg");
-                
-                if (n > -1) {
-                   $('<div/>', {
-                       text: 'Creation ' +Element.name,
-                       id: 'thumb_' +Element.id
-                   }).appendTo('#jsontest');   
-
-                    var img = $('<img />', { 
-                      src: '/photos-gallery/' +Element.name,
-                      alt: Element.name,
-                      width: '12%',
-                      height: '12%'
-                    });
-                      img.width(img.clientWidth /10);
-                      img.height(img.clientHeight /10);                    
-    
-                    console.log(img);
-                    
-                    img.appendTo('#thumb_' +Element.id);
-
-
-            
-            
-            
-                    //$creaimg = ('<img src="/photos-gallery/' +Element.name +'"/>');
-            
-                }
-                /*else if (n === -1) {
-                   $creatitle = ('<h3>' +Element.name +'</h3>'); 
-                   $('<div/>', {
-                       text: 'Creation ' +name,
-                       html: $creatitle
-                   }).appendTo('#jsontest');               
-                }
-                */
-          
-        });
-
-    });    
-    
-}
-
-
-
-
-});   
    
 </script>     
     
-    
 </body>
-
 </html>

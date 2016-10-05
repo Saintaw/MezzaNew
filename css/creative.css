@@ -474,3 +474,13 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
+.gallery-container + div {
+
+}
+
+.nanoGalleryContainer, nanoGalleryContainerParent {
+    width:800px !important;
+    border: solid 1px #ff66ff8  !important;
+    display: inline-table !important;
+}

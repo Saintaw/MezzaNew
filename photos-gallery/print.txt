@@ -1,0 +1,76 @@
+Eppur si muove
+L'annonce
+Mezza Luna
+New York
+Nuinotenacht
+print.txt
+Ultima forsan
+Eppur si muove\A.jpg
+Eppur si muove\B.jpg
+Eppur si muove\C.jpg
+Eppur si muove\D.jpg
+Eppur si muove\E.jpg
+Eppur si muove\F.jpg
+Eppur si muove\G.jpg
+Eppur si muove\H.jpg
+L'annonce\A.jpg
+L'annonce\B.jpg
+L'annonce\C.jpg
+L'annonce\D.jpg
+L'annonce\E.jpg
+L'annonce\F.jpg
+L'annonce\G.jpg
+L'annonce\H.jpg
+L'annonce\I.jpg
+L'annonce\J.jpg
+L'annonce\K.jpg
+L'annonce\L.jpg
+L'annonce\M.jpg
+L'annonce\N.jpg
+Mezza Luna\A.jpg
+Mezza Luna\B.jpg
+Mezza Luna\C.jpg
+Mezza Luna\D.jpg
+Mezza Luna\E.jpg
+Mezza Luna\F.jpg
+Mezza Luna\G.jpg
+Mezza Luna\H.jpg
+Mezza Luna\I.jpg
+Mezza Luna\J.jpg
+Mezza Luna\K.jpg
+Mezza Luna\L.jpg
+Mezza Luna\M.jpg
+Mezza Luna\N.jpg
+New York\A.jpg
+New York\B.jpg
+New York\C.jpg
+New York\D.jpg
+New York\E.jpg
+New York\F.jpg
+New York\G.jpg
+New York\H.jpg
+New York\I.jpg
+New York\J.jpg
+New York\K.jpg
+Nuinotenacht\A.jpg
+Nuinotenacht\B.jpg
+Nuinotenacht\C.jpg
+Nuinotenacht\D.jpg
+Nuinotenacht\E.jpg
+Nuinotenacht\F.jpg
+Nuinotenacht\G.jpg
+Nuinotenacht\H.jpg
+Nuinotenacht\I.jpg
+Nuinotenacht\J.jpg
+Ultima forsan\A.jpg
+Ultima forsan\B.jpg
+Ultima forsan\C.jpg
+Ultima forsan\D.jpg
+Ultima forsan\E.jpg
+Ultima forsan\F 1.jpg
+Ultima forsan\F.jpg
+Ultima forsan\G.jpg
+Ultima forsan\H.jpg
+Ultima forsan\I.jpg
+Ultima forsan\J.jpg
+Ultima forsan\K.jpg

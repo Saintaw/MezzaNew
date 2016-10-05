@@ -24,6 +24,11 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
+    <style>
+        .creations_med {
+            padding: 4px;
+        }
+    </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -136,6 +141,7 @@
         <div class="container">
             <div class="row">
                 <div class="Creations">
+                    //debug php out <br >
 <?php
 $dir    = './media/portfolio/';
 $files = scandir($dir);
@@ -144,7 +150,7 @@ foreach ($files as &$value) {
     
 if (strpos($value, 'jpg') !== false) {
     $size = getimagesize($dir .$value);
-    echo "<img src='" .$dir .$value ."' " .$size[3] ." />";
+    //echo "<img alt='" .$value ."' src='" .$dir .$value ."' width='" .$size[0]/10 ."' height='" .$size[1]/10 ."' class='creations_med' /> ";
 }    
 }
 ?>
@@ -349,24 +355,52 @@ listCreations();
 
 function listCreations() {
   var $testContainer = $('#jsontest');
-  var thumbsApi = "/img/creations/thumblist.json";
+  var thumbsApi = "/photos-gallery/gallery.json";
   $.getJSON( thumbsApi, {
     format: "json"
   })
     .done(function( data ) {
     console.log('data: ',data);
         $(data).each(function(index, Element) {
-            console.log(index,Element);
+                //console.log(index,Element);
+                //only if it's an image
+                var n = Element.name.indexOf(".jpg");
+                
+                if (n > -1) {
+                   $('<div/>', {
+                       text: 'Creation ' +Element.name,
+                       id: 'thumb_' +Element.id
+                   }).appendTo('#jsontest');   
 
-            $creaimg = ('<img src="/img/creations/' +Element.thumb +'"/>');
+                    var img = $('<img />', { 
+                      src: '/photos-gallery/' +Element.name,
+                      alt: Element.name,
+                      width: '12%',
+                      height: '12%'
+                    });
+                      img.width(img.clientWidth /10);
+                      img.height(img.clientHeight /10);                    
+    
+                    console.log(img);
+                    
+                    img.appendTo('#thumb_' +Element.id);
 
-            $('<div/>', {
-                id: 'crea_' +index,
-                text: 'Creation ' +index,
-                html: $creaimg
-            }).appendTo('#jsontest');
 
-
+            
+            
+            
+                    //$creaimg = ('<img src="/photos-gallery/' +Element.name +'"/>');
+            
+                }
+                /*else if (n === -1) {
+                   $creatitle = ('<h3>' +Element.name +'</h3>'); 
+                   $('<div/>', {
+                       text: 'Creation ' +name,
+                       html: $creatitle
+                   }).appendTo('#jsontest');               
+                }
+                */
+          
         });
 
     });    

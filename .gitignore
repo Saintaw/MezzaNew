@@ -46,3 +46,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 /nbproject/private/
+
+#project ignores
+/node_modules
+/nbproject

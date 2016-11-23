@@ -26,14 +26,14 @@
                       <li>
                         <a class="page-scroll" href="#about">Accueil</a>
                     </li>                  
-                    
+                     <li>
+                        <a class="page-scroll" href="#actu">Actualités</a>
+                    </li>                   
                     
                     <li>
                         <a class="page-scroll" href="#Creations">Créations</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#actu">Actualités</a>
-                    </li>
+
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
                     </li>

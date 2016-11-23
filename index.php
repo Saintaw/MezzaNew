@@ -21,13 +21,34 @@
 
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="css/animate.min.css" type="text/css">
-    <link href="css/nanogallery.min.css" rel="stylesheet" type="text/css">
+    <link href="css/lightbox.css" rel="stylesheet">
+    
   
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
     <style>
         .creations_med {
             padding: 4px;
+        }
+        .event_title {
+            display: inline-block;
+            width: 30%;
+            text-align: center;
+            padding: 4px;
+            margin: 4px;
+        }
+        .img-hook {
+            width:99%;
+            height: 99%;
+            
+        }
+        .img-hold {
+            display: inline-block;
+            width:23%;
+            height:100px;
+            padding:2px;
+            margin: 2px;
+
         }
     </style>
 
@@ -82,28 +103,8 @@ require_once './inc/nav.php';
 			<p class="font" align="right">Giacomo Leopardi   1798-1837    
                         
                     </p>
-                    <a href="#" class="btn btn-default btn-xl">decouvrez!</a>
+                    <a href="#Creations" class="btn btn-default btn-xl page-scroll">découvrez!</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="Creations">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Creations</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="Creations">
-<?php
-require_once './inc/gallery.php';
-?>
-</div>
             </div>
         </div>
     </section>
@@ -130,139 +131,46 @@ require_once './inc/gallery.php';
                         <br /><br />
                         Les 8,9,10 & 11 Juin &agrave; 20:30
                         </p>        
+    </section>    
+    
+    <section class="bg-primary" id="Creations">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Créations</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="Creations">
+               
+<?php
+require_once './inc/gallery.php';
+?>
+</div>
+            </div>
+        </div>
     </section>
+
+
                 </div>
             </div>
         </div>
         
-        
 
-    
-    
-    
-    
-    <section class="no-padding" id="portfolio">
-
-        
-        
-        
-        <div class="container-fluid">
-            <div class="row no-gutter">
-            <div>
-                <div id="jsontest">
-                    <h1>/*tests*/</h1>
-                </div>
-            </div>
-                       
-                
-                
-                
-            <!--   
-                
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="media/---_0024.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="media/---_0012.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="media/_15_0941.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="media/_24_1021.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="media/__9_1136.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            
-            -->
-            </div>
-        </div>
-    </section>
 
 
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <h2 class="section-heading">Contactez nous!</h2>
                     <hr class="primary">
-                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                    <p>Laissez nous un message et nous vous répondrons le plus rapidement possible.</p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x wow bounceIn"></i>
@@ -270,12 +178,16 @@ require_once './inc/gallery.php';
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
+                    <p>//contact form link</p>
                 </div>
             </div>
         </div>
     </section>
 
+<?php        
+require_once('/inc/modal.php');        
+?>        
+        
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -286,8 +198,7 @@ require_once './inc/gallery.php';
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
-    <!--<script src="js/jquery.collagePlus.min.js"></script>-->
-    <script type="text/javascript" src="js/jquery.nanogallery.min.js"></script>
+    <script src="js/lightbox.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
@@ -295,9 +206,12 @@ require_once './inc/gallery.php';
     <!-- Custom scripts -->
     <script src="js/gallery.js"></script>
 <script>
+ 
+    
+    $(function() {
 
-   
-</script>     
+    })
+</script>  
     
 </body>
 </html>

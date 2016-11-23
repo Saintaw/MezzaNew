@@ -1,5 +1,5 @@
 $(function() {
-    
+  
     
 $( ".modal-body" ).on( "click", ".img-hook", function() {
     
@@ -11,7 +11,7 @@ $( ".modal-body" ).on( "click", ".img-hook", function() {
 
 $( ".gallery-hook" ).on( "click", function() {
     console.clear();
-    $('.modal-body').html('');
+    $('.modal-body').empty();
     $eventId = $(this).data("event");
     $eventName = $(this).data("eventname");
   
@@ -23,21 +23,11 @@ $( ".gallery-hook" ).on( "click", function() {
        
     //Loop through Gallery
     $.each($.parseJSON(data), function( index, value ) {
-          console.log(value);
-          
-          console.log(value.alt);
-          console.log(value.url);
-          console.log(value.caption);         
-          console.log(value.thumbnail);
-          console.log(value.path);
-          
+        
           //Add the items in the modal container
-          // .modal-body
-          
-          
             var div = $('<div>');
             div.addClass('img-hold');
-            
+            div.appendTo('.modal-body');
             /*var a = $('<a>');
             a.attr('href', value.url);
             a.attr('data-path', value.path);
@@ -51,15 +41,13 @@ $( ".gallery-hook" ).on( "click", function() {
             img.attr('data-file', value.path+value.url);
             img.addClass('thumbnail img-hook');
             img.appendTo(div);
-          
-            div.appendTo('.modal-body');
-          
-          
+
         }); 
     $("#modal-title").html($eventName);
-    
-     $("#myModal").modal({backdrop: true});
-    
+    $(".modal-footer").html("Copyright: Mezzaluna 2016");
+    $("#myModal").modal({backdrop: true});
+     
+        
     });
 });
 
